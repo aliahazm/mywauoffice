@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mywauoffice/Dashboard.dart';
+import 'package:mywauoffice/ResetPassword.dart';
 import 'package:mywauoffice/SignInScreen.dart';
 
 void main() {
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const Dashboard(),
+      home: Dashboard(),
     );
   }
 }

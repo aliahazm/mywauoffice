@@ -1,68 +1,34 @@
-// ignore: file_names
-// ignore_for_file: constant_identifier_names
-
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:adobe_xd/blend_mask.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class Dashboard extends StatelessWidget {
-  const Dashboard({
+  Dashboard({
     Key? key,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xff7c4bff),
+      backgroundColor: const Color(0xffffffff),
       body: Stack(
         children: <Widget>[
-          Container(
-            color: const Color(0xfffafafa),
-            margin: const EdgeInsets.fromLTRB(0.0, 205.0, 0.0, 0.0),
-          ),
           Pinned.fromPins(
-            Pin(size: 16.0, start: 28.0),
-            Pin(size: 12.0, start: 48.0),
-            child: Stack(
-              children: <Widget>[
-                Stack(
-                  children: <Widget>[
-                    Stack(
-                      children: <Widget>[
-                        Pinned.fromPins(
-                          Pin(start: 0.0, end: 0.0),
-                          Pin(size: 1.0, start: 0.0),
-                          child: SvgPicture.string(
-                            _svg_v9g4y1,
-                            allowDrawingOutsideViewBox: true,
-                            fit: BoxFit.fill,
-                          ),
-                        ),
-                        Align(
-                          alignment: const Alignment(-1.0, 0.091),
-                          child: SizedBox(
-                            width: 12.0,
-                            height: 1.0,
-                            child: SvgPicture.string(
-                              _svg_kojy09,
-                              allowDrawingOutsideViewBox: true,
-                            ),
-                          ),
-                        ),
-                        Pinned.fromPins(
-                          Pin(start: 0.0, end: 0.0),
-                          Pin(size: 1.0, end: -1.0),
-                          child: SvgPicture.string(
-                            _svg_t9a7z1,
-                            allowDrawingOutsideViewBox: true,
-                            fit: BoxFit.fill,
-                          ),
-                        ),
-                      ],
-                    ),
+            Pin(start: 0.0, end: 0.0),
+            Pin(size: 206.0, start: 0.0),
+            child: Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment(0.167, -1.755),
+                  end: Alignment(-0.397, 1.371),
+                  colors: [
+                    const Color(0xff7c4bff),
+                    const Color(0xffc8aeff),
+                    const Color(0xffe9d8ff)
                   ],
+                  stops: [0.0, 0.563, 1.0],
                 ),
-              ],
+              ),
             ),
           ),
           Pinned.fromPins(
@@ -74,9 +40,9 @@ class Dashboard extends StatelessWidget {
                   decoration: BoxDecoration(
                     color: const Color(0xffffffff),
                     borderRadius: BorderRadius.circular(20.0),
-                    boxShadow: const [
+                    boxShadow: [
                       BoxShadow(
-                        color: Color(0x4db1b6f3),
+                        color: const Color(0x4db1b6f3),
                         offset: Offset(0, 5),
                         blurRadius: 15,
                       ),
@@ -99,12 +65,12 @@ class Dashboard extends StatelessWidget {
                           Pinned.fromPins(
                             Pin(start: 11.2, end: 8.8),
                             Pin(size: 20.0, middle: 0.5),
-                            child: const Text(
+                            child: Text(
                               'Clock In',
                               style: TextStyle(
                                 fontFamily: 'DM Sans',
                                 fontSize: 15,
-                                color: Color(0xffffffff),
+                                color: const Color(0xffffffff),
                                 fontWeight: FontWeight.w700,
                               ),
                               softWrap: false,
@@ -123,12 +89,12 @@ class Dashboard extends StatelessWidget {
                       Pinned.fromPins(
                         Pin(start: 0.0, end: 0.0),
                         Pin(size: 21.0, start: 0.0),
-                        child: const Text(
+                        child: Text(
                           '10 March 2020',
                           style: TextStyle(
                             fontFamily: 'DM Sans',
                             fontSize: 16,
-                            color: Color(0xff333333),
+                            color: const Color(0xff333333),
                             fontWeight: FontWeight.w500,
                           ),
                           softWrap: false,
@@ -141,12 +107,12 @@ class Dashboard extends StatelessWidget {
                           height: 17.0,
                           child: BlendMask(
                             blendMode: BlendMode.multiply,
-                            child: const Text(
+                            child: Text(
                               'Please clock in',
                               style: TextStyle(
                                 fontFamily: 'DM Sans',
                                 fontSize: 13,
-                                color: Color(0xff7b7890),
+                                color: const Color(0xff7b7890),
                                 fontWeight: FontWeight.w500,
                               ),
                               softWrap: false,
@@ -167,9 +133,9 @@ class Dashboard extends StatelessWidget {
               decoration: BoxDecoration(
                 color: const Color(0xffffffff),
                 borderRadius: BorderRadius.circular(20.0),
-                boxShadow: const [
+                boxShadow: [
                   BoxShadow(
-                    color: Color(0x29000000),
+                    color: const Color(0x29000000),
                     offset: Offset(0, 3),
                     blurRadius: 6,
                   ),
@@ -180,26 +146,26 @@ class Dashboard extends StatelessWidget {
           Pinned.fromPins(
             Pin(size: 34.0, start: 48.0),
             Pin(size: 20.0, middle: 0.3422),
-            child: const Text(
+            child: Text(
               'Staff',
               style: TextStyle(
                 fontFamily: 'DM Sans',
                 fontSize: 15,
-                color: Color(0xff000000),
+                color: const Color(0xff000000),
               ),
             ),
           ),
           Pinned.fromPins(
             Pin(size: 46.0, end: 51.0),
             Pin(size: 11.0, middle: 0.3383),
-            child: const SingleChildScrollView(
+            child: SingleChildScrollView(
               primary: false,
               child: Text(
                 'Status',
                 style: TextStyle(
                   fontFamily: 'DM Sans',
                   fontSize: 15,
-                  color: Color(0xff000000),
+                  color: const Color(0xff000000),
                 ),
               ),
             ),
@@ -216,9 +182,10 @@ class Dashboard extends StatelessWidget {
                   Pin(size: 33.0, start: 22.0),
                   Pin(size: 33.0, start: 7.0),
                   child: Container(
-                    decoration: const BoxDecoration(
+                    decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage('assets/images/profile pic.png'),
+                        image:
+                            const AssetImage('assets/images/profile pic.png'),
                         fit: BoxFit.cover,
                       ),
                       borderRadius:
@@ -226,7 +193,7 @@ class Dashboard extends StatelessWidget {
                     ),
                   ),
                 ),
-                const Align(
+                Align(
                   alignment: Alignment(-0.278, -0.316),
                   child: SizedBox(
                     width: 179.0,
@@ -238,13 +205,13 @@ class Dashboard extends StatelessWidget {
                         style: TextStyle(
                           fontFamily: 'DM Sans',
                           fontSize: 9,
-                          color: Color(0xff000000),
+                          color: const Color(0xff000000),
                         ),
                       ),
                     ),
                   ),
                 ),
-                const Align(
+                Align(
                   alignment: Alignment(-0.354, 0.263),
                   child: SizedBox(
                     width: 159.0,
@@ -256,7 +223,7 @@ class Dashboard extends StatelessWidget {
                         style: TextStyle(
                           fontFamily: 'DM Sans',
                           fontSize: 9,
-                          color: Color(0xff000000),
+                          color: const Color(0xff000000),
                         ),
                       ),
                     ),
@@ -265,14 +232,14 @@ class Dashboard extends StatelessWidget {
                 Pinned.fromPins(
                   Pin(size: 47.0, end: 40.0),
                   Pin(size: 12.0, middle: 0.4865),
-                  child: const SingleChildScrollView(
+                  child: SingleChildScrollView(
                     primary: false,
                     child: Text(
                       'ON LEAVE',
                       style: TextStyle(
                         fontFamily: 'DM Sans',
                         fontSize: 10,
-                        color: Color(0xffff0000),
+                        color: const Color(0xffff0000),
                       ),
                     ),
                   ),
@@ -292,9 +259,10 @@ class Dashboard extends StatelessWidget {
                   Pin(size: 33.0, start: 21.0),
                   Pin(size: 33.0, start: 7.0),
                   child: Container(
-                    decoration: const BoxDecoration(
+                    decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage('assets/images/profile pic.png'),
+                        image:
+                            const AssetImage('assets/images/profile pic.png'),
                         fit: BoxFit.cover,
                       ),
                       borderRadius:
@@ -302,7 +270,7 @@ class Dashboard extends StatelessWidget {
                     ),
                   ),
                 ),
-                const Align(
+                Align(
                   alignment: Alignment(-0.278, -0.316),
                   child: SizedBox(
                     width: 179.0,
@@ -314,13 +282,13 @@ class Dashboard extends StatelessWidget {
                         style: TextStyle(
                           fontFamily: 'DM Sans',
                           fontSize: 9,
-                          color: Color(0xff000000),
+                          color: const Color(0xff000000),
                         ),
                       ),
                     ),
                   ),
                 ),
-                const Align(
+                Align(
                   alignment: Alignment(-0.354, 0.263),
                   child: SizedBox(
                     width: 159.0,
@@ -332,7 +300,7 @@ class Dashboard extends StatelessWidget {
                         style: TextStyle(
                           fontFamily: 'DM Sans',
                           fontSize: 9,
-                          color: Color(0xff000000),
+                          color: const Color(0xff000000),
                         ),
                       ),
                     ),
@@ -341,14 +309,14 @@ class Dashboard extends StatelessWidget {
                 Pinned.fromPins(
                   Pin(size: 47.0, end: 39.0),
                   Pin(size: 12.0, middle: 0.4865),
-                  child: const SingleChildScrollView(
+                  child: SingleChildScrollView(
                     primary: false,
                     child: Text(
                       'ON LEAVE',
                       style: TextStyle(
                         fontFamily: 'DM Sans',
                         fontSize: 10,
-                        color: Color(0xffff0000),
+                        color: const Color(0xffff0000),
                       ),
                     ),
                   ),
@@ -368,9 +336,10 @@ class Dashboard extends StatelessWidget {
                   Pin(size: 33.0, start: 21.0),
                   Pin(size: 33.0, start: 7.0),
                   child: Container(
-                    decoration: const BoxDecoration(
+                    decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage('assets/images/profile pic.png'),
+                        image:
+                            const AssetImage('assets/images/profile pic.png'),
                         fit: BoxFit.cover,
                       ),
                       borderRadius:
@@ -378,7 +347,7 @@ class Dashboard extends StatelessWidget {
                     ),
                   ),
                 ),
-                const Align(
+                Align(
                   alignment: Alignment(-0.278, -0.316),
                   child: SizedBox(
                     width: 179.0,
@@ -390,13 +359,13 @@ class Dashboard extends StatelessWidget {
                         style: TextStyle(
                           fontFamily: 'DM Sans',
                           fontSize: 9,
-                          color: Color(0xff000000),
+                          color: const Color(0xff000000),
                         ),
                       ),
                     ),
                   ),
                 ),
-                const Align(
+                Align(
                   alignment: Alignment(-0.354, 0.263),
                   child: SizedBox(
                     width: 159.0,
@@ -408,7 +377,7 @@ class Dashboard extends StatelessWidget {
                         style: TextStyle(
                           fontFamily: 'DM Sans',
                           fontSize: 9,
-                          color: Color(0xff000000),
+                          color: const Color(0xff000000),
                         ),
                       ),
                     ),
@@ -417,14 +386,14 @@ class Dashboard extends StatelessWidget {
                 Pinned.fromPins(
                   Pin(size: 47.0, end: 40.0),
                   Pin(size: 12.0, middle: 0.4865),
-                  child: const SingleChildScrollView(
+                  child: SingleChildScrollView(
                     primary: false,
                     child: Text(
                       'ON LEAVE',
                       style: TextStyle(
                         fontFamily: 'DM Sans',
                         fontSize: 10,
-                        color: Color(0xffff0000),
+                        color: const Color(0xffff0000),
                       ),
                     ),
                   ),
@@ -433,12 +402,12 @@ class Dashboard extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 45.0, end: 21.0),
-            Pin(size: 45.0, start: 30.0),
+            Pin(size: 40.0, start: 25.0),
+            Pin(size: 40.0, start: 29.0),
             child: Container(
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('assets/images/logo2.png'),
+                  image: const AssetImage('assets/images/logo2.png'),
                   fit: BoxFit.fill,
                 ),
               ),
@@ -453,9 +422,9 @@ class Dashboard extends StatelessWidget {
                   decoration: BoxDecoration(
                     color: const Color(0xffffffff),
                     borderRadius: BorderRadius.circular(20.0),
-                    boxShadow: const [
+                    boxShadow: [
                       BoxShadow(
-                        color: Color(0x29000000),
+                        color: const Color(0x29000000),
                         offset: Offset(0, 3),
                         blurRadius: 6,
                       ),
@@ -466,8 +435,8 @@ class Dashboard extends StatelessWidget {
                   Pin(start: 0.0, end: 0.0),
                   Pin(size: 36.0, start: 0.0),
                   child: Container(
-                    decoration: const BoxDecoration(
-                      color: Color(0xff7c4bff),
+                    decoration: BoxDecoration(
+                      color: const Color(0xff7c4bff),
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(20.0),
                         topRight: Radius.circular(20.0),
@@ -478,14 +447,14 @@ class Dashboard extends StatelessWidget {
                 Pinned.fromPins(
                   Pin(size: 117.0, middle: 0.5),
                   Pin(size: 17.0, start: 8.0),
-                  child: const SingleChildScrollView(
+                  child: SingleChildScrollView(
                     primary: false,
                     child: Text(
                       'Announcement',
                       style: TextStyle(
                         fontFamily: 'DM Sans',
                         fontSize: 15,
-                        color: Color(0xffffffff),
+                        color: const Color(0xffffffff),
                       ),
                     ),
                   ),
@@ -499,11 +468,11 @@ class Dashboard extends StatelessWidget {
             child: Stack(
               children: <Widget>[
                 Container(
-                  decoration: const BoxDecoration(
-                    color: Color(0xffffffff),
+                  decoration: BoxDecoration(
+                    color: const Color(0xffffffff),
                     boxShadow: [
                       BoxShadow(
-                        color: Color(0x08333333),
+                        color: const Color(0x08333333),
                         offset: Offset(10, -10),
                         blurRadius: 108,
                       ),
@@ -569,8 +538,8 @@ class Dashboard extends StatelessWidget {
                               child: Stack(
                                 children: <Widget>[
                                   Padding(
-                                    padding: const EdgeInsets.fromLTRB(
-                                        0.0, 1.7, 0.0, 0.0),
+                                    padding:
+                                        EdgeInsets.fromLTRB(0.0, 1.7, 0.0, 0.0),
                                     child: SizedBox.expand(
                                         child: SvgPicture.string(
                                       _svg_pqqr,
@@ -673,8 +642,8 @@ class Dashboard extends StatelessWidget {
                                     fit: BoxFit.fill,
                                   )),
                                   Padding(
-                                    padding: const EdgeInsets.fromLTRB(
-                                        3.3, 3.8, 3.8, 3.6),
+                                    padding:
+                                        EdgeInsets.fromLTRB(3.3, 3.8, 3.8, 3.6),
                                     child: SizedBox.expand(
                                         child: SvgPicture.string(
                                       _svg_gw3n20,
@@ -773,16 +742,16 @@ class Dashboard extends StatelessWidget {
                       Pinned.fromPins(
                         Pin(start: 0.0, end: 0.0),
                         Pin(size: 18.0, end: 0.0),
-                        child: const Text(
+                        child: Text(
                           'Information Technology',
                           style: TextStyle(
                             fontFamily: 'DM Sans',
                             fontSize: 12,
-                            color: Color(0xff4b4b4b),
+                            color: const Color(0xff4b4b4b),
                           ),
                         ),
                       ),
-                      const Padding(
+                      Padding(
                         padding: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 10.0),
                         child: SizedBox.expand(
                             child: Text(
@@ -790,7 +759,7 @@ class Dashboard extends StatelessWidget {
                           style: TextStyle(
                             fontFamily: 'DM Sans',
                             fontSize: 15,
-                            color: Color(0xff23496b),
+                            color: const Color(0xff23496b),
                             fontWeight: FontWeight.w700,
                           ),
                         )),
@@ -802,9 +771,10 @@ class Dashboard extends StatelessWidget {
                   Pin(size: 60.0, start: 0.0),
                   Pin(start: 0.0, end: 0.0),
                   child: Container(
-                    decoration: const BoxDecoration(
+                    decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage('assets/images/profile pic.png'),
+                        image:
+                            const AssetImage('assets/images/profile pic.png'),
                         fit: BoxFit.cover,
                       ),
                       borderRadius:
@@ -818,12 +788,12 @@ class Dashboard extends StatelessWidget {
           Pinned.fromPins(
             Pin(size: 34.0, start: 23.0),
             Pin(size: 16.0, middle: 0.6822),
-            child: const Text(
+            child: Text(
               'Today',
               style: TextStyle(
                 fontFamily: 'DM Sans',
                 fontSize: 12,
-                color: Color(0xff7b7890),
+                color: const Color(0xff7b7890),
               ),
             ),
           ),
@@ -836,9 +806,9 @@ class Dashboard extends StatelessWidget {
                   decoration: BoxDecoration(
                     color: const Color(0xffe9d8ff),
                     borderRadius: BorderRadius.circular(5.0),
-                    boxShadow: const [
+                    boxShadow: [
                       BoxShadow(
-                        color: Color(0x4db1b6f3),
+                        color: const Color(0x4db1b6f3),
                         offset: Offset(0, 3),
                         blurRadius: 5,
                       ),
@@ -848,36 +818,36 @@ class Dashboard extends StatelessWidget {
                 Pinned.fromPins(
                   Pin(size: 99.0, end: 10.0),
                   Pin(size: 11.0, end: 6.0),
-                  child: const Text(
+                  child: Text(
                     'RAZALI BIN SUDIN @ ALIAS',
                     style: TextStyle(
                       fontFamily: 'DM Sans',
                       fontSize: 8,
-                      color: Color(0xff7b7890),
+                      color: const Color(0xff7b7890),
                     ),
                   ),
                 ),
                 Pinned.fromPins(
                   Pin(start: 11.0, end: 12.0),
                   Pin(size: 35.0, start: 8.0),
-                  child: const Text(
+                  child: Text(
                     'BORANG OUTING TELAH TERSEDIA, SILA GUNAKANNYA DENGAN BAIK',
                     style: TextStyle(
                       fontFamily: 'DM Sans',
                       fontSize: 10,
-                      color: Color(0xff000000),
+                      color: const Color(0xff000000),
                     ),
                   ),
                 ),
                 Pinned.fromPins(
                   Pin(size: 99.0, start: 11.0),
                   Pin(size: 11.0, end: 6.0),
-                  child: const Text(
+                  child: Text(
                     '2022-02-10',
                     style: TextStyle(
                       fontFamily: 'DM Sans',
                       fontSize: 8,
-                      color: Color(0xff7b7890),
+                      color: const Color(0xff7b7890),
                     ),
                   ),
                 ),
@@ -893,9 +863,9 @@ class Dashboard extends StatelessWidget {
                   decoration: BoxDecoration(
                     color: const Color(0xffe9d8ff),
                     borderRadius: BorderRadius.circular(5.0),
-                    boxShadow: const [
+                    boxShadow: [
                       BoxShadow(
-                        color: Color(0x4db1b6f3),
+                        color: const Color(0x4db1b6f3),
                         offset: Offset(0, 3),
                         blurRadius: 10,
                       ),
@@ -905,36 +875,36 @@ class Dashboard extends StatelessWidget {
                 Pinned.fromPins(
                   Pin(size: 99.0, end: 10.0),
                   Pin(size: 11.0, end: 6.0),
-                  child: const Text(
+                  child: Text(
                     'RAZALI BIN SUDIN @ ALIAS',
                     style: TextStyle(
                       fontFamily: 'DM Sans',
                       fontSize: 8,
-                      color: Color(0xff7b7890),
+                      color: const Color(0xff7b7890),
                     ),
                   ),
                 ),
                 Pinned.fromPins(
                   Pin(start: 11.0, end: 12.0),
                   Pin(size: 35.0, start: 8.0),
-                  child: const Text(
+                  child: Text(
                     'BORANG OUTING TELAH TERSEDIA, SILA GUNAKANNYA DENGAN BAIK',
                     style: TextStyle(
                       fontFamily: 'DM Sans',
                       fontSize: 10,
-                      color: Color(0xff000000),
+                      color: const Color(0xff000000),
                     ),
                   ),
                 ),
                 Pinned.fromPins(
                   Pin(size: 99.0, start: 11.0),
                   Pin(size: 11.0, end: 6.0),
-                  child: const Text(
+                  child: Text(
                     '2022-02-10',
                     style: TextStyle(
                       fontFamily: 'DM Sans',
                       fontSize: 8,
-                      color: Color(0xff7b7890),
+                      color: const Color(0xff7b7890),
                     ),
                   ),
                 ),
@@ -947,12 +917,6 @@ class Dashboard extends StatelessWidget {
   }
 }
 
-const String _svg_v9g4y1 =
-    '<svg viewBox="4.0 6.0 16.0 1.0" ><path transform="translate(4.0, 6.0)" d="M 0 0 L 16 0" fill="none" stroke="#333333" stroke-width="1.2999999523162842" stroke-miterlimit="4" stroke-linecap="round" /></svg>';
-const String _svg_kojy09 =
-    '<svg viewBox="4.0 12.0 12.0 1.0" ><path transform="translate(4.0, 12.0)" d="M 0 0 L 12 0" fill="none" stroke="#333333" stroke-width="1.2999999523162842" stroke-miterlimit="4" stroke-linecap="round" /></svg>';
-const String _svg_t9a7z1 =
-    '<svg viewBox="4.0 18.0 16.0 1.0" ><path transform="translate(4.0, 18.0)" d="M 0 0 L 16 0" fill="none" stroke="#333333" stroke-width="1.2999999523162842" stroke-miterlimit="4" stroke-linecap="round" /></svg>';
 const String _svg_ic2dwk =
     '<svg viewBox="0.0 0.0 75.0 30.0" ><path  d="M 10 0 L 65 0 C 70.52285003662109 0 75 4.477152347564697 75 10 L 75 20 C 75 25.52284812927246 70.52285003662109 30 65 30 L 10 30 C 4.477152347564697 30 0 25.52284812927246 0 20 L 0 10 C 0 4.477152347564697 4.477152347564697 0 10 0 Z" fill="#32e00d" stroke="none" stroke-width="1" stroke-miterlimit="4" stroke-linecap="butt" /></svg>';
 const String _svg_ts870a =
