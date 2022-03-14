@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:adobe_xd/blend_mask.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:intl/intl.dart';
 
 class Dashboard extends StatelessWidget {
   Dashboard({
@@ -9,6 +10,11 @@ class Dashboard extends StatelessWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    DateTime now = DateTime.now();
+    String formattedDate = DateFormat('dd MMM yyyy').format(now);
+    String formattedTime = DateFormat('HH:mm:ss a').format(now);
+    //String formattedDate = DateFormat('yyyy-MM-dd – kk:mm').format(now);
+
     return Scaffold(
       backgroundColor: const Color(0xffffffff),
       body: Stack(
@@ -90,7 +96,7 @@ class Dashboard extends StatelessWidget {
                         Pin(start: 0.0, end: 0.0),
                         Pin(size: 21.0, start: 0.0),
                         child: Text(
-                          '10 March 2020',
+                          '$formattedDate',
                           style: TextStyle(
                             fontFamily: 'DM Sans',
                             fontSize: 15,
@@ -108,7 +114,7 @@ class Dashboard extends StatelessWidget {
                           child: BlendMask(
                             blendMode: BlendMode.multiply,
                             child: Text(
-                              '02:17:30 PM',
+                              '$formattedTime',
                               style: TextStyle(
                                 fontFamily: 'DM Sans',
                                 fontSize: 13,
@@ -465,6 +471,7 @@ class Dashboard extends StatelessWidget {
               ],
             ),
           ),
+          // tab navigation
           Pinned.fromPins(
             Pin(start: 0.0, end: 0.0),
             Pin(size: 70.0, end: 0.0),
@@ -788,21 +795,21 @@ class Dashboard extends StatelessWidget {
               ],
             ),
           ),
-          Pinned.fromPins(
-            Pin(size: 34.0, start: 23.0),
-            Pin(size: 16.0, middle: 0.6909),
-            child: Text(
-              'Today',
-              style: TextStyle(
-                fontFamily: 'DM Sans',
-                fontSize: 12,
-                color: const Color(0xff7b7890),
-              ),
-            ),
-          ),
+          // Pinned.fromPins(
+          //   Pin(size: 34.0, start: 23.0),
+          //   Pin(size: 16.0, middle: 0.6909),
+          //   child: Text(
+          //     'Today',
+          //     style: TextStyle(
+          //       fontFamily: 'DM Sans',
+          //       fontSize: 12,
+          //       color: const Color(0xff7b7890),
+          //     ),
+          //   ),
+          // ),
           Pinned.fromPins(
             Pin(start: 23.0, end: 21.0),
-            Pin(size: 61.0, middle: 0.760),
+            Pin(size: 61.0, middle: 0.740),
             child: Stack(
               children: <Widget>[
                 Container(
@@ -859,7 +866,7 @@ class Dashboard extends StatelessWidget {
           ),
           Pinned.fromPins(
             Pin(start: 22.0, end: 22.0),
-            Pin(size: 61.0, end: 117.0),
+            Pin(size: 61.0, end: 129.0),
             child: Stack(
               children: <Widget>[
                 Container(
