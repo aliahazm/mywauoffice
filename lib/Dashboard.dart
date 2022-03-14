@@ -32,7 +32,7 @@ class Dashboard extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 271.0, end: 47.0),
+            Pin(size: 271.0, end: 55.0),
             Pin(size: 67.0, middle: 0.2309),
             child: Stack(
               children: <Widget>[
@@ -64,13 +64,13 @@ class Dashboard extends StatelessWidget {
                           )),
                           Pinned.fromPins(
                             Pin(start: 11.2, end: 8.8),
-                            Pin(size: 20.0, middle: 0.5),
-                            child: Text(
+                            Pin(size: 20.0, middle: 0.8),
+                            child: const Text(
                               'Clock In',
                               style: TextStyle(
                                 fontFamily: 'DM Sans',
-                                fontSize: 15,
-                                color: const Color(0xffffffff),
+                                fontSize: 13,
+                                color: Color(0xffffffff),
                                 fontWeight: FontWeight.w700,
                               ),
                               softWrap: false,
@@ -93,7 +93,7 @@ class Dashboard extends StatelessWidget {
                           '10 March 2020',
                           style: TextStyle(
                             fontFamily: 'DM Sans',
-                            fontSize: 16,
+                            fontSize: 15,
                             color: const Color(0xff333333),
                             fontWeight: FontWeight.w500,
                           ),
@@ -108,7 +108,7 @@ class Dashboard extends StatelessWidget {
                           child: BlendMask(
                             blendMode: BlendMode.multiply,
                             child: Text(
-                              'Please clock in',
+                              '02:17:30 PM',
                               style: TextStyle(
                                 fontFamily: 'DM Sans',
                                 fontSize: 13,
@@ -128,7 +128,7 @@ class Dashboard extends StatelessWidget {
           ),
           Pinned.fromPins(
             Pin(start: 14.0, end: 13.0),
-            Pin(size: 224.0, middle: 0.4388),
+            Pin(size: 250.0, middle: 0.4388),
             child: Container(
               decoration: BoxDecoration(
                 color: const Color(0xffffffff),
@@ -144,28 +144,28 @@ class Dashboard extends StatelessWidget {
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 34.0, start: 48.0),
-            Pin(size: 20.0, middle: 0.3422),
-            child: Text(
+            Pin(size: 32.0, start: 48.0),
+            Pin(size: 32.0, middle: 0.3472),
+            child: const Text(
               'Staff',
               style: TextStyle(
                 fontFamily: 'DM Sans',
-                fontSize: 15,
-                color: const Color(0xff000000),
+                fontSize: 14,
+                color: Color(0xff000000),
               ),
             ),
           ),
           Pinned.fromPins(
-            Pin(size: 46.0, end: 51.0),
-            Pin(size: 11.0, middle: 0.3383),
-            child: SingleChildScrollView(
+            Pin(size: 46.0, end: 58.0),
+            Pin(size: 14.0, middle: 0.3383),
+            child: const SingleChildScrollView(
               primary: false,
               child: Text(
                 'Status',
                 style: TextStyle(
                   fontFamily: 'DM Sans',
-                  fontSize: 15,
-                  color: const Color(0xff000000),
+                  fontSize: 14,
+                  color: Color(0xff000000),
                 ),
               ),
             ),
@@ -230,7 +230,7 @@ class Dashboard extends StatelessWidget {
                   ),
                 ),
                 Pinned.fromPins(
-                  Pin(size: 47.0, end: 40.0),
+                  Pin(size: 52.0, end: 40.0),
                   Pin(size: 12.0, middle: 0.4865),
                   child: SingleChildScrollView(
                     primary: false,
@@ -307,7 +307,7 @@ class Dashboard extends StatelessWidget {
                   ),
                 ),
                 Pinned.fromPins(
-                  Pin(size: 47.0, end: 39.0),
+                  Pin(size: 52.0, end: 40.0),
                   Pin(size: 12.0, middle: 0.4865),
                   child: SingleChildScrollView(
                     primary: false,
@@ -384,7 +384,7 @@ class Dashboard extends StatelessWidget {
                   ),
                 ),
                 Pinned.fromPins(
-                  Pin(size: 47.0, end: 40.0),
+                  Pin(size: 52.0, end: 40.0),
                   Pin(size: 12.0, middle: 0.4865),
                   child: SingleChildScrollView(
                     primary: false,
@@ -401,9 +401,10 @@ class Dashboard extends StatelessWidget {
               ],
             ),
           ),
+          // logo mywau atas kiri
           Pinned.fromPins(
             Pin(size: 40.0, start: 25.0),
-            Pin(size: 40.0, start: 29.0),
+            Pin(size: 40.0, start: 39.0),
             child: Container(
               decoration: BoxDecoration(
                 image: DecorationImage(
@@ -431,6 +432,7 @@ class Dashboard extends StatelessWidget {
                     ],
                   ),
                 ),
+                // Announcement Tab decoration
                 Pinned.fromPins(
                   Pin(start: 0.0, end: 0.0),
                   Pin(size: 36.0, start: 0.0),
@@ -444,6 +446,7 @@ class Dashboard extends StatelessWidget {
                     ),
                   ),
                 ),
+                // Announcement word
                 Pinned.fromPins(
                   Pin(size: 117.0, middle: 0.5),
                   Pin(size: 17.0, start: 8.0),
@@ -731,17 +734,17 @@ class Dashboard extends StatelessWidget {
           ),
           Pinned.fromPins(
             Pin(start: 32.0, end: 29.0),
-            Pin(size: 60.0, start: 91.0),
+            Pin(size: 65.0, start: 91.0),
             child: Stack(
               children: <Widget>[
                 Pinned.fromPins(
                   Pin(size: 237.0, end: 0.0),
-                  Pin(size: 43.0, end: 6.0),
+                  Pin(size: 49.0, end: 6.0),
                   child: Stack(
                     children: <Widget>[
                       Pinned.fromPins(
                         Pin(start: 0.0, end: 0.0),
-                        Pin(size: 18.0, end: 0.0),
+                        Pin(size: 12.09, end: 0.0),
                         child: Text(
                           'Information Technology',
                           style: TextStyle(
@@ -787,7 +790,7 @@ class Dashboard extends StatelessWidget {
           ),
           Pinned.fromPins(
             Pin(size: 34.0, start: 23.0),
-            Pin(size: 16.0, middle: 0.6822),
+            Pin(size: 16.0, middle: 0.6909),
             child: Text(
               'Today',
               style: TextStyle(
@@ -799,7 +802,7 @@ class Dashboard extends StatelessWidget {
           ),
           Pinned.fromPins(
             Pin(start: 23.0, end: 21.0),
-            Pin(size: 61.0, middle: 0.751),
+            Pin(size: 61.0, middle: 0.760),
             child: Stack(
               children: <Widget>[
                 Container(
